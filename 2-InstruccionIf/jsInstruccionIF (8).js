@@ -7,12 +7,10 @@ edad=document.getElementById("edad").value;
 var estadoCivil;
 estadoCivil=document.getElementById("estadoCivil").value;
 
-if(edad>=18)
+if(edad>=18 && estadoCivil=="Soltero")
 {
-    if(estadoCivil="Soltero")
-    {
+
         alert ("es soltero y no es menor")
-    }
 }
 	
 
