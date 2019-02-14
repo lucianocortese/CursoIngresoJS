@@ -7,12 +7,16 @@ function mostrar()
 	{
 		alert(num + "_EXELENTE")
 	}
-	else if (num>4)
+	else
 	{
-		alert(num + "_APROBADO")
-	}
-	else 
-	{
-		alert (num + "_Vamos, la proxima se puede")
+		if (num>4)
+		{
+			alert(num + "_APROBADO")
+		}
+		else 
+		{
+			alert (num + "_Vamos, la proxima se puede")
+		}
+
 	}
 }//FIN DE LA FUNCIÓN
