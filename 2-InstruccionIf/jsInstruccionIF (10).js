@@ -5,17 +5,17 @@ function mostrar()
 	num = Math.floor(Math.random() *10 + 1)
 	if(num>=9)
 	{
-		alert(num + "_EXELENTE")
+		alert(num + "EXELENTE")
 	}
 	else
 	{
 		if (num>4)
 		{
-			alert(num + "_APROBADO")
+			alert(num + "APROBADO")
 		}
 		else 
 		{
-			alert (num + "_Vamos, la proxima se puede")
+			alert (num + "Vamos, la proxima se puede")
 		}
 
 	}
