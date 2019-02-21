@@ -28,8 +28,9 @@ function verificar() {
   numeroIngresado = document.getElementById("numero").value;
   console.log(numeroIngresado);
 
-    if (numeroIngresado == numeroSecreto) {
-      
+    if (numeroIngresado == numeroSecreto) 
+    {
+
       if(contadorIntentos<=3)
       {
         alert("sos un genio")
@@ -40,17 +41,19 @@ function verificar() {
       }
 
     }
-    else {
+    else 
+    {
 
-       if (numeroIngresado > numeroSecreto) {
+       if (numeroIngresado > numeroSecreto) 
+      {
          alert("te pasaste ")
-       }
-        else {
+      }
+        else 
+      {
           alert("falta")
       }
       intentos.value =contadorIntentos;
-      
-      
+           
     }
 
 
