@@ -36,36 +36,36 @@ function CalcularPrecio() {
         }
     }
 
-        if (cantidad == 4) {
-            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
-                lamparas = lamparas * 0.75
+    if (cantidad == 4) {
+        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+            lamparas = lamparas * 0.75
+        }
+        else {
+            lamparas = (lamparas * 0.80)
+        }
+    }
+
+    if (cantidad == 3) {
+        if (marca == "ArgentinaLuz") {
+            (lamparas = lamparas * 0.85)
+        }
+        else {
+            if (marca == "FelipeLamparas") {
+                lamparas = lamparas * 0.90
             }
             else {
-                lamparas = (lamparas * 0.80)
+                lamparas = (lamparas * 0.95)
             }
         }
+    }
 
-            if (cantidad == 3) {
-                if (marca == "ArgentinaLuz") {
-                    (lamparas = lamparas * 0.85)
-                }
-                else {
-                    if (marca == "FelipeLamparas") {
-                        lamparas = lamparas * 0.90
-                    }
-                    else {
-                        lamparas = (lamparas * 0.95)
-                    }
-                }
-                }
+    pago = lamparas * cantidad
 
-                pago = lamparas * cantidad
+    if (pago >= 120) {
+        ingresoBruto = pago * 0.10
+        pago = pago + ingresoBruto
+        alert("Por pasar una suma de $120 debe pagar$" + ingresoBruto + " de ingreso bruto")
+    }
 
-                if (pago >= 120) {
-                    ingresoBruto = pago * 0.10
-                    pago = pago + ingresoBruto
-                    alert("Por pasar una suma de $120 debe pagar$" + ingresoBruto + " de ingreso bruto")
-                }
-
-                document.getElementById("precioDescuento").value = pago
-            }
+    document.getElementById("precioDescuento").value = pago
+}
