@@ -50,7 +50,7 @@ function comenzar() {
 			default:
 				if(contadorIntentos>6)
 				{
-					if(contador<10)
+					if(contadorIntentos<10)
 					{
 						alert("falta tecnica")
 					}
