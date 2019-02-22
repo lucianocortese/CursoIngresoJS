@@ -1,82 +1,54 @@
 function mostrar()
 {
-    function mostrar()
-    {
-        var libros
-        var valor
-        var formaDePago
-        var valor2Libros
-        var valor2000
-        var valorTarjeta
-        libros= prompt("Cuantos libros compraste?")
-        libros=parseInt(libros)
-        valor= prompt ("Cuál es el valor total de los libros?")
-        valor= parseInt (valor)
-        formaDePago= prompt ("paga con tarjeta? responda si o no")
+   
+    var Pago
+    var formaDePago;
+    var paquete;
     
-        if (libros>2)
-        {
-            valor2Libros= valor*0.90
-            if (valor2Libros>2000)
-            {
-                valor2000= valor2Libros*0.85
-                if(formaDePago = "si")
-                {
-                    valorTarjeta= valor2000*1.10
-                        alert("")
-                    
-                }
-                else
-                {
-                    valorTarjeta= valor2000
-                }
-            }
-            else
-            {    
-                valor2000= valor2Libros
-                if(formaDePago = "si")
-                {
-                    valorTarjeta= valor2000*1.10
-                    
-                }
-                else
-                {
-                    valorTarjeta= valor2000
-                }
-            }
-        }
-        else
-        {
-            valor2Libros= valor
-            if (valor2Libros>2000)
-            {
-                valor2000= valor2Libros*0.85
-                if(formaDePago = "si")
-                {
-                    valorTarjeta= valor2000*1.10
-                    
-                }
-                else
-                {
-                    valorTarjeta= valor2000
-                }
-            }
-            else
-            {    
-                valor2000= valor2Libros
-                if(formaDePago = "si")
-                {
-                    valorTarjeta= valor2000*1.10
-                    
-                }
-                else
-                {
-                    valorTarjeta= valor2000
-                }
-            }
-        }
-        
-       alert("Por la cantidad de libros que compraste debes pagar " + valor2Libros + ". Por el monto del pago  "+ valor2000 +". Y por la forma de pago " +valorTarjeta);
-}
+    pago= prompt("cuando va a pagar?")
+    formaDePago= prompt("Cual es su metodo de pago? Solo indique la letra:  A-Visa; B-Paypal; C-MercadoPago; D-Efectivo E-Otro " )
+    paquete= prompt("Que paquete desea? Solo indique la letra:  A - Todo Incluido; B - Solo Desayuno; C - Otros")
+    pago=parseInt(pago)
 
+    switch(formaDePago){
+        case "A":
+        (pago= pago * 0.90)
+        break;
+        case "B":
+            if (paquete== "A")
+            {
+                pago=pago*0.75
+            }
+            else{
+                pago=pago*0.85
+            }
+            
+        break;
+        case "C":
+        (pago=pago * 0.90)
+        break;  
+        case "D":
+            if (paquete== "B")
+            {
+                pago= pago * 0.70
+            }
+            else
+            {
+                if(paquete== "A")
+                {
+                    pago=pago*0.65
+                }
+                else
+                {
+                    (pago= pago* 0.80)
+                }
+            }
+        break;
+        default:
+        (pago= pago*0.95)
+        break;
+    }
+
+    
+    alert("usted debe abonar $" + pago)
 }

@@ -33,33 +33,28 @@ function comenzar() {
 		switch(contadorIntentos)
 		{
 			case 1:
-				alert( "usted es un Psíquico")
+				alert( "usted es un Psíquico");
 				break;
 			case 2:
-				alert( "excelente percepción")
+				alert( "excelente percepción");
 				break;
 			case 3:
-				alert( "Esto es suerte")
+				alert( "Esto es suerte");
 				break;
 			case 4:
-				alert( "Excelente técnica")
+				alert( "Excelente técnica");
 				break;
 			case 5:
-				alert( "falta técnica")
+				alert("usted está en la media");
 				break;
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+					alert("falta técnica");
+					break
 			default:
-				if(contadorIntentos>6)
-				{
-					if(contadorIntentos<10)
-					{
-						alert("falta tecnica")
-					}
-					else
-					{
-						alert ("afortunado en el amor")
-					}
-
-				}
+					alert ("afortunado en el amor!!");
 		}
 	}
 	  else 

@@ -5,8 +5,8 @@ function mostrar()
 		
 	while (num>=1)
 	{
-		alert("tu numero es " + num)
-		num = num - 1
+		console.log("tu numero es " + (num-1))
+		
 	}
 
 }//FIN DE LA FUNCIÓN

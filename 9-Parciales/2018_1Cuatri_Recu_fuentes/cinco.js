@@ -1,42 +1,63 @@
-    function mostrar()
-    {
-        var libros
-        var valor
-        var formaDePago
-        var valor2Libros
-        var valor2000
-        var valorTarjeta
-        libros= prompt("Cuantos libros compraste?")
-        libros=parseInt(libros)
-        valor= prompt ("Cuál es el valor total de los libros?")
-        valor= parseInt (valor)
-        formaDePago= prompt ("paga con tarjeta? responda si o no")
+ function mostrar()
+{
+    var importe
+    var importe2
+    var importe3
+    var importe4
+    var importeTotal
+    var mayor
+    importe= prompt("ingrese el primer importe");
+    importe2= prompt("ingrese el segundo importe");
+    importe3= prompt("ingrese el tercer importe");
+    importe4= prompt ("ingrese el cuarto importe");
+
+    importe = parseInt (importe);
+    importe2 =parseInt (importe2);
+    importe3= parseInt (importe3);
+    importe4= parseInt (importe4);
+
+    importeTotal= (importe+importe2+importe3+importe4)
     
-        if (libros>2)
+    if(importe>=importe2 && importe>=importe3 && importe>=importe4)
+    {
+        mayor=importe
+    }
+    else {
+        if(importe2>=importe3 && importe1>=importe4)
         {
-            valor2Libros= valor*0.90
-       
+        mayor=importe2
         }
         else
         {
-            valor2Libros= valor
+            if(importe3>=importe4)
+            {
+                mayor=importe3
+            }
+            else
+            {
+              mayor=importe4  
+            }
         }
-        if (valor2Libros>2000)
+    }
+
+    alert ("el mayor es $" + mayor)
+
+        if (importeTotal>100)
         {
-            valor2000= valor2Libros*0.85
+        importeTotal= (importeTotal*0.90)
         }
         else
-        {    
-            valor2000= valor2Libros
-        }
-        if(formaDePago = "si")
         {
-            valorTarjeta= valor2000*1.10
-            
+            if (importeTotal>50)
+            {
+            importeTotal= (importeTotal*0.95)
+            }
+            else
+            {
+                importeTotal= (importeTotal*1.15)
+            }
         }
-        else
-        {
-            valorTarjeta= valor2000
-        }
-       alert("Por la cantidad de libros que compraste debes pagar " + valor2Libros + ". Por el monto del pago  "+ valor2000 +". Y por la forma de pago " +valorTarjeta);
+
+    alert("el total a pagar $" + importeTotal)
+
 }

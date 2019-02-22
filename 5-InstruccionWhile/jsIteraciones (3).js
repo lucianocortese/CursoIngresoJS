@@ -1,12 +1,17 @@
 function mostrar()
 {
 
-var clave = prompt("ingrese el número clave.");
-while(clave="utn750")
+var clave = prompt("ingrese la clave");
+var contador
+contador=1
+contador= parseInt(contador)
+
+while(clave!="utn750" && contador<3)
 {
-    alert("pusiste bien la contraseña")
-    var clave = prompt("ingrese el número clave.");
-    
+   clave = prompt("ingrese la clave nuevamente");
+   contador++
 }
+
+
 
 }//FIN DE LA FUNCIÓN
