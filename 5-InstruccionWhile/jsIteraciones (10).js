@@ -27,21 +27,25 @@ function mostrar()
 		numero=parseInt(numero);
 		respuesta=prompt ("Para salir escriba: no");
 
-		
-		if(numero<0)
-		{
-			sumaNegativo= sumaNegativo + numero;
-			contadorPositivo++;
-		}
-		if(numero>0)
-		{
-			sumaPositivo= sumaPositivo + numero;
-			contadorNegativo++
-		}
 		if (numero == 0)
 		{
 			contadorCero++;
 		}
+		else
+		{
+			if(numero<0)
+			{
+				sumaNegativo= sumaNegativo + numero;
+				contadorPositivo++;
+			}
+			else
+			{
+				sumaPositivo= sumaPositivo + numero;
+				contadorNegativo++
+			}
+		}
+		
+	
 		if (numero%2==0)
 		{
 			contadorPares++;
