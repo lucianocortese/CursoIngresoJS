@@ -9,6 +9,9 @@ function mostrar()
 	var contadorNegativo;
 	var contadorPares;
 	var respuesta;
+	var promedioPositivo;
+	var promedioNegativo;
+	var diferencia;
 	//declarar contadores y variables
 
 	respuesta="si";
@@ -46,11 +49,14 @@ function mostrar()
 		}
 		
 	
-		if (numero%2==0)
+		if (numero%2==0 && numero!=0)
 		{
 			contadorPares++;
 		}
 	}
+	promedioPositivo =
+	promedioNegativo =
+	diferencia =
 
 	console.log ("suma positivo "+ sumaPositivo);
 	console.log ("suma negativo "+ sumaNegativo);
