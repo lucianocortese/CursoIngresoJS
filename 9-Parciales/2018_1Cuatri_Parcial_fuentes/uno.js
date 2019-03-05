@@ -1,11 +1,16 @@
 
 function mostrar()
 {
-var b; //base
-var h; //altura
-b=prompt("Indique la base del rectangulo en cm");
-h=prompt("Indique la altura del rectangulo en cm");
-var resultado;
-resultado=b*h;
-alert("El perimetro del rectangulo es : " + resultado + "cm2");    
+    var h;
+    var b;
+    var per
+
+    h= prompt ("Indique la altura del cuadrado");
+    b= prompt ("Indique  la base del curadrado");
+    h= parseInt(h);
+    b= parseInt(b);
+    per= (b*2) + (h*2);
+
+    alert( "el perimetro del rectangulo es " + per);
+
 }

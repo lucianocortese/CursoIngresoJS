@@ -31,20 +31,19 @@ function mostrar() {
         if (superficie % 2 == 1) {
             contadorImpar++;
         }
-        if(superficie< 100)
-        {
+        if (superficie < 100) {
             contadorMenos100++
         }
-        else{
-            
+        else {
+
             if (superficie == 100) {
                 contadorIgual100++;
-        }
-        if (superficie > 100 && primerPais == "") {
+            }
+            if (superficie > 100 && primerPais == "") {
                 primerPais = pais;
             }
         }
-       
+
         sumaDeKilometros = sumaDeKilometros + superficie;
         if (contador == 0 || superficie < supMinima) {
             supMinima = superficie;
